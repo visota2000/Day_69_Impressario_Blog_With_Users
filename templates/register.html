@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+{% from 'bootstrap5/form.html' import render_form, render_field %}
+
+{% block content %}
+{% include "header.html" %}
+
+  <!-- Page Header -->
+  <header class="masthead" style="background-image:  url('{{ url_for('static', filename='img/kazuo-ota-oPpBcbGcy44-unsplash_reg.jpg')}}')">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <div class="page-heading">
+            <h1>新規登録</h1>
+            <span class="subheading">
+              <p>「バレエを学ぶ人のためのロシア語講座」のブロッグに<br />登録していただき、<br />
+                授業を受け学んだこと、感じたことはもちろん、教師やスタッフでの印象などをコメント欄にお寄せください。 </p>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+       {{ render_form(form) }}
+
+
+      </div>
+    </div>
+  </div>
+
+{% include "footer.html" %}
+{% endblock %}
+

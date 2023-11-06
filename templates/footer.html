@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+<!-- Footer -->
+   {% block content %}
+
+<footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <ul class="list-inline text-center">
+            <li class="list-inline-item">
+              <a href="https://lin.ee/LTWV3mb">
+                  <i class="fa-brands fa-line fa-2x"  style="color: #8AA1FF"></i>
+              </a>
+            </li>
+            <li class="list-inline-item">
+              <a href="https://www.facebook.com/impressario.jp/">
+                  <i class="fa-brands fa-facebook fa-2x" style="color: #8AA1FF"></i>
+              </a>
+            </li>
+            <li class="list-inline-item">
+              <a href="https://www.instagram.com/impressario_ballet/">
+                  <i class="fa-brands fa-square-instagram fa-2x" style="color: #8AA1FF"></i>
+              </a>
+            </li>
+          </ul>
+          <p class="copyright text-muted">Copyright &copy; Impressario合同会社 | 開発者：Olga Chichmareva</p>
+
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  {% endblock %}
+
+{% block scripts %}
+  <!-- Bootstrap core JavaScript -->
+  <script src="{{ url_for('static', filename='vendor/jquery/jquery.min.js')}}"></script>
+  <script src="{{ url_for('static', filename='vendor/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
+
+  <!-- Custom scripts for this template -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  <script src="{{ url_for('static', filename='js/clean-blog.min.js')}}"></script>
+<script src="https://kit.fontawesome.com/ec91008a88.js" crossorigin="anonymous"></script>
+{% endblock %}
+</body>
+
+</html>

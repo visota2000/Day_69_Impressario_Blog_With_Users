@@ -1,0 +1,67 @@
+{% extends "base.html" %}
+{% block content %}
+{% include "header.html" %}
+
+  <!-- Page Header -->
+  <header class="masthead" style="background-image: url('{{ url_for('static', filename='img/1.jpg')}}')">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <div class="site-heading">
+            <h1>バレエを学ぶ人のための<br/>ロシア語講座</h1>
+            <span class="subheading"><h2>講座のブログ</h2></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+<div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+        <h2>講座の概要</h2>
+        <p>このオンライン講座は一般的なロシア語講座ではなく、バレエのレッスンで多用されるロシア語表現とバレエの知識の両方が同時に習得できる、バレエを学ぶ人にとって大変実用的な講座となります。発音、初級レベルの文法、日常会話、バレエのレッスンで使う表現や単語、ロシアで困った時の対処方法をミサキちゃんとローマくん二人のバレエダンサーの会話を参考にしながらロシア語を楽しく身につけるコースです。</p>
+             </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+        {% for post in all_posts %}
+        <div class="post-preview">
+          <a href="{{ url_for('show_post', post_id=post.id) }}">
+            <h2 class="post-title">
+              {{post.title}}
+            </h2>
+            <h3 class="post-subtitle">
+              {{post.subtitle}}
+            </h3>
+          </a>
+          <p class="post-meta">投稿者
+            <a href="#">{{post.author.name}}</a>
+            投稿日{{post.date}}
+          {% if current_user.id==1: %}
+            <a href="{{url_for('delete_post', post_id=post.id) }}">✘</a>
+          {% endif %}
+          </p>
+        </div>
+        <hr>
+        {% endfor %}
+
+        <!-- New Post -->
+        <div class="clearfix">
+          {% if current_user.id==1 %}
+          <a class="btn btn-primary float-right" href="{{url_for('add_new_post')}}">新コースの解説を書く</a>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </div>
+<!--  <hr>-->
+
+
+{% include "footer.html" %}
+{% endblock %}

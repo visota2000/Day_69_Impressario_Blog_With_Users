@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% block content %}
+{% include "header.html" %}
+
+  <!-- Page Header -->
+  <header class="masthead" id="about_img" style="background-image: url({{ url_for('static', filename='img/kazuo-ota-vAEMArLIXng-unsplash.jpg')}})">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <div class="page-heading">
+            <h1>運営会社</h1>
+            <span class="subheading">IMPRESSARIOとは</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+        <p>IMPRESSARIO（インプレッサリオ）とは、ダンサーやミュージシャンをサポートするプロデューサー・演出家を表すことばです。</p>
+        <p>弊社は、海外留学・就労を目指すダンサーやコンクールなどの目標へ向かうダンサーを対象に幅広くさまざまなサービスを提供しています。 個人指導、講師派遣、ワークショップやプロジェクトの企画/開催、技術面のサポートに加え、ダンス全般に関するご相談や手続きなどのサポートなど、統合的なプロ育成活動を展開していくことを目標に活動しております。</p>
+        <p>2018年以来、ロシア国立ワガノワバレエアカデミーでの教育プログラムを支援しています。</p>
+        <p>ワガノワアカデミーでの学生向けインターンシップ、バレエ教師（再教育）向けインターンシップ、セミナー、アカデミーでの1か月のサマースクール、短期研修など、日本からの学生が最も貴重な経験を得ることができるプロジェクトを行なっています。</p>
+        <p> 2019年、バレエメッセの愛好家や専門家向けの新しいプロジェクトを開始しました。 大人からできるバレエ留学に基づいています。   世界で有名なバレエダンサーのディアナヴィシニョーワさんと彼女のバレエスタジオStudio Contextの共同で行っている初のプロジェクトです。</p>
+        <p>私たちは常に発展し続けてています。 親愛なる学生、保護者、専門家、バレエ愛好家の皆さん、私たちのプログラムに参加してください。</p>
+      </div>
+    </div>
+  </div>
+
+<!--  <hr>-->
+
+  {% include "footer.html" %}
+{% endblock %}
