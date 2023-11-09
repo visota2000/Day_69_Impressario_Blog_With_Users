@@ -32,7 +32,9 @@
 <!--           If user id is 1 then they can see the Edit Post button -->
           {% if current_user.id == 1 %}
             <div class="clearfix">
+              <p>
             <a class="btn btn-primary float-right" href="{{url_for('edit_post', post_id=post.id)}}">ポストを編集する</a>
+              </p>
             </div>
           {% endif %}
 

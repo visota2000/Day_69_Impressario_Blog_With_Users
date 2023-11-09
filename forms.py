@@ -23,8 +23,9 @@ class LoginForm(FlaskForm):
     submit = SubmitField('送信する')
 
 class CommentForm(FlaskForm):
-    comment_text = CKEditorField("コメントをご入力ください.【ご注意】コメントを投稿するにはログインしてください。", validators=[DataRequired(), Length(1, 500)])
+    comment_text = CKEditorField("コメントをご入力ください.※【ご注意】コメントを投稿するにはログインしてください。", validators=[DataRequired(), Length(1, 500)])
     submit = SubmitField("コメントを投稿する")
+
 
 class ContactForm(FlaskForm):
     email=EmailField('メールアドレスをご入力ください', validators=[DataRequired()])

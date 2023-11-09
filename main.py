@@ -29,7 +29,7 @@ import bleach
 from dotenv import load_dotenv
 
 
-load_dotenv ('E:\\PycharmProjects\\EnvironmentVariables\\.env')
+load_dotenv('.env')
 MY_EMAIL = os.getenv("MY_EMAIL")
 APP_PASSWORD = os.getenv("APP_PASSWORD") ##Using App Password instead of common Gggole email password
 ##For details of Google App Password see https://towardsdatascience.com/automate-sending-emails-with-gmail-in-python-449cc0c3c317
@@ -324,3 +324,4 @@ def send_mail(fromaddr, toaddr,name, user_email,  subject, message):
 
 if __name__ == "__main__":
     app.run(debug=True) #changet from False to True
+
